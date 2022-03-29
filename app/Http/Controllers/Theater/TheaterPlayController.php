@@ -33,6 +33,7 @@ class TheaterPlayController extends ShowController
         $postValues = $request->input();
 
         //Чтобы контроллер не толстел, логику работы с моделями помещаем в репозиторий.
+        //TODO переписать возвращаемые ответы под спецификацию JSON:API
         return $this->theaterPlayRepository->create($postValues);
     }
 
